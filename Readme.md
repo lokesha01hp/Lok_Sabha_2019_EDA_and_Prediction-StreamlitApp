@@ -79,25 +79,25 @@ The project uses two publicly available datasets from Kaggle:
 ## Installation
 
 1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/lokesha01hp/Lok_Sabha_2019_EDA_and_Prediction.git
-   cd Lok_Sabha_2019_EDA_and_Prediction
-   ```
+```bash
+git clone https://github.com/lokesha01hp/Lok_Sabha_2019_EDA_and_Prediction.git
+cd Lok_Sabha_2019_EDA_and_Prediction
+```
 
-### 1. Set Up a Virtual Environment (Recommended)
+2. **Set Up a Virtual Environment (Recommended)**
 
 ```bash
 python -m venv venv
 venv\Scripts\activate  # On Windows
 ```
 
-#### 2. Install Dependencies
+3. **Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-#### 3. Download & Place Datasets
+4. **Download & Place Datasets**
 
 Place LS_2.0.csv in:
 
@@ -106,36 +106,35 @@ datasets/Indian Candidates for General Election 2019/
 Place Indian_States.shp (and related .shx, .dbf, etc.) in datasets/India states/Igismap/:
 ```
 
-### Run the Jupyter Notebook
+5. **Run the Jupyter Notebook**
 
 ```bash
 jupyter notebook main.ipynb
 ```
 
+
 ---
 
-### Inside the notebook:
+### Inside the Notebook
 
-Perform EDA on candidate demographics, votes, and electoral patterns.
+- **Perform EDA** on candidate demographics, votes, and electoral patterns.
+- **Generate visualizations**, including:
+  - 🗺 Choropleth Map
+  - 🌞 Sunburst Chart
+  - 📊 Bar & Pie Charts
+  - 🔀 Sankey Diagram
 
-Generate visualizations:
 
--Choropleth Map
 
--Sunburst Chart
+### License
 
--Bar & Pie Charts
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
--Sankey Diagram
 
--Confusion Matrix
 
-## License
+### Acknowledgments
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+**Datasets by:**
+- Prakrut Chauhan  
+- Somacodes (Kaggle)
 
-## Acknowledgments
-
-Datasets by:
---Prakrut Chauhan
---Somacodes (Kaggle)

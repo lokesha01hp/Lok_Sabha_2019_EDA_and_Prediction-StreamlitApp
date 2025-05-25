@@ -84,39 +84,58 @@ The project uses two publicly available datasets from Kaggle:
    cd Lok_Sabha_2019_EDA_and_Prediction
    ```
 
-Set Up a Virtual Environment (recommended):
+### 1. Set Up a Virtual Environment (Recommended)
+
+```bash
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate  # On Windows
+```
 
-Install Dependencies:
+#### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Download Datasets:
+#### 3. Download & Place Datasets
 
-Place LS_2.0.csv in datasets/Indian Candidates for General Election 2019/.
-Place Indian_States.shp in datasets/India states/Igismap/.
+Place LS_2.0.csv in:
 
-Usage
+```bash
+datasets/Indian Candidates for General Election 2019/
+Place Indian_States.shp (and related .shx, .dbf, etc.) in datasets/India states/Igismap/:
+```
 
-Run the Jupyter Notebook:
+### Run the Jupyter Notebook
+
+```bash
 jupyter notebook main.ipynb
+```
 
-Execute cells to perform EDA, generate visualizations (choropleth, sunburst, bar, pie, Sankey, confusion matrix), and train the model.
+---
 
-Predictive Model:
+### Inside the notebook:
 
-Accuracy: 90.51%.
-Classification Report: precision recall f1-score support
-0 0.92 0.95 0.94 331
-1 0.86 0.77 0.81 122
-accuracy 0.91 453
+Perform EDA on candidate demographics, votes, and electoral patterns.
 
-License
+Generate visualizations:
+
+-Choropleth Map
+
+-Sunburst Chart
+
+-Bar & Pie Charts
+
+-Sankey Diagram
+
+-Confusion Matrix
+
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgments
+## Acknowledgments
 
-Datasets: Kaggle users Prakrut Chauhan and Somacodes.
-
-Tools: Python, Plotly, Scikit-learn, Geopandas.
+Datasets by:
+--Prakrut Chauhan
+--Somacodes (Kaggle)

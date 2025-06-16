@@ -15,17 +15,17 @@ def load_model():
 
 # Main Streamlit app
 def main():
-    st.title("🗳️ Political Candidate Win Predictor")
+    st.title(" Political Candidate Win Predictor")
 
-    st.markdown("### 📋 Enter Candidate Details:")
+    st.markdown("### Enter Candidate Details:")
 
-    party = st.selectbox("Party", ["BJP", "INC", "AAP", "SP", "BSP", "Independent", "Other"])
-    education = st.selectbox("Education Level", [
+    party = st.selectbox("Party", ["Select any party name","BJP", "INC", "AAP", "SP", "BSP", "Independent", "Other"])
+    education = st.selectbox("Education Level", ["Select any qualification details"
         "10th Pass", "12th Pass", "Graduate", "Graduate Professional",
         "Post Graduate", "Doctorate", "Illiterate", "Others"
     ])
-    gender = st.selectbox("Gender", ["MALE", "FEMALE", "OTHER"])
-    category = st.selectbox("Category", ["GENERAL", "OBC", "SC", "ST", "Other"])
+    gender = st.selectbox("Gender", ['',"MALE", "FEMALE", "OTHER"])
+    category = st.selectbox("Category", ['',"GENERAL", "OBC", "SC", "ST", "Other"])
 
     criminal_cases = st.number_input("Number of Criminal Cases", min_value=0)
     age = st.number_input("Age", min_value=25, max_value=100, value=35)

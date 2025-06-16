@@ -59,9 +59,10 @@ def main():
         st.markdown("###  Prediction Result:")
         st.success(f"The candidate is predicted to: **{result}**")
 
-        st.markdown("---")
-        st.markdown("#### 📄 Candidate Data Preview:")
-        st.dataframe(input_df)
+        if st.button("Preview the Candidate data"):
+            st.markdown("---")
+            st.markdown("#### Candidate Data Preview:")
+            st.dataframe(input_df)
 
 if __name__ == "__main__":
     main()

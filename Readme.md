@@ -83,7 +83,7 @@ Just fire it up locally and input candidate details to predict if they would hav
 
 1. **Clone the Repository**:
 ```bash
-git clone https://github.com/lokesha01hp/Lok_Sabha_2019_EDA_and_Prediction.git
+git clone https://github.com/lokesha01hp/Lok_Sabha_2019_EDA_and_Prediction-StreamlitApp.git
 cd Lok_Sabha_2019_EDA_and_Prediction
 ```
 

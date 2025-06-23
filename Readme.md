@@ -1,80 +1,82 @@
-# Indian Elections 2019: Exploratory Data Analysis and Prediction
+# Indian Elections 2019: Exploratory Data Analysis and Prediction 🎯
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Plotly](https://img.shields.io/badge/Plotly-4.0%2B-orange) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Plotly](https://img.shields.io/badge/Plotly-4.0%2B-orange) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-green) ![Streamlit](https://img.shields.io/badge/Streamlit-1.20%2B-red) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## Project Overview
+## 🚀 Project Overview
 
-This project conducts an in-depth analysis of the 2019 Indian General Elections, a pivotal event in the world's largest democracy, through **Exploratory Data Analysis (EDA)** and **predictive modeling**. Utilizing two Kaggle datasets, the project employs Plotly for interactive visualizations to explore constituency distributions, party performance, candidate demographics, and criminal cases. A RandomForestClassifier model predicts election outcomes with **90.51% accuracy**, providing a data-driven tool for political forecasting. The analysis offers valuable insights for researchers, analysts, and policymakers, enhancing transparency and understanding of electoral dynamics.
+This project dives into the 2019 Indian General Elections—the crown jewel of the democratic process—through **Exploratory Data Analysis (EDA)** and **Machine Learning-based prediction**.
 
-## Objectives
+Using datasets from Kaggle:
 
-- **Exploratory Data Analysis**:
+- Analyze key trends like party performance, voter demographics, and candidate criminal records.
+- Predict the outcome of elections using a trained **RandomForestClassifier** with a **90.51% accuracy rate**.
+- And now, you can experience the model live via an intuitive **Streamlit-based web app**. No Jupyter notebook wrangling needed. Just run, click, predict.
 
-  - Visualize constituency distributions across Indian states using geospatial and interactive plots.
-  - Analyze party performance (win counts, win-loss ratios), gender ratios, educational qualifications, and criminal cases.
-  - Create engaging, dark-themed Plotly visualizations for accessibility.
+## 🎯 Objectives
 
-- **Predictive Modeling**:
-  - Build a RandomForestClassifier to predict candidate success based on features like party, education, gender, votes, and financial status.
-  - Achieve high accuracy (90.51%) with robust metrics (precision, recall, F1-score) and a confusion matrix.
-  - Demonstrate practical applicability with sample predictions.
+### Exploratory Data Analysis:
+- Visualize constituency distributions across Indian states.
+- Analyze win-loss ratios, gender representation, education levels, and criminal backgrounds.
+- All visualizations built with Plotly, themed for high contrast and accessibility.
+
+### Predictive Modeling:
+- Input candidate info like party, age, education, assets, etc.
+- Predict winning chances using a trained RandomForestClassifier.
+- Deployed as a **Streamlit app** for live predictions.
 
 ## Datasets
 
-The project uses two publicly available datasets from Kaggle:
+### 1. **Indian Candidates for General Election 2019**  
+- 📦 `LS_2.0.csv`  
+- 🧭 Source: [Kaggle](https://www.kaggle.com/datasets/prakrutchauhan/indian-candidates-for-general-election-2019)  
+- 📝 Candidate attributes: `PARTY`, `GENDER`, `AGE`, `EDUCATION`, `ASSETS`, `CRIMINAL CASES`, etc.
 
-1. **Indian Candidates for General Election 2019** (`LS_2.0.csv`):
+### 2. **India States (Shapefile)**  
+- 📦 `Indian_States.shp` (+ `.shx`, `.dbf`, etc.)  
+- 🧭 Source: [Kaggle](https://www.kaggle.com/datasets/somacodes/india-states)  
+- 🗺 Used for choropleth mapping of constituency counts.
 
-   - Source: [Kaggle](https://www.kaggle.com/datasets/prakrutchauhan/indian-candidates-for-general-election-2019)
-   - Description: Details candidate attributes (e.g., `PARTY`, `EDUCATION`, `GENDER`, `CRIMINAL CASES`, `AGE`, `ASSETS`, `LIABILITIES`, `TOTAL VOTES`, `WINNER`) for ~2,000 candidates across 543 constituencies.
-   - Size: ~2,000 rows.
+## 🔍 Key Insights
 
-2. **India States** (`Indian_States.shp`):
-   - Source: [Kaggle](https://www.kaggle.com/datasets/somacodes/india-states)
-   - Description: Geospatial shapefile with state boundaries (`st_nm`) for visualizing constituency distributions.
-
-## Key Findings
-
-- **Geopolitical Trends**: Uttar Pradesh and Maharashtra lead in constituency counts, reflecting large voter bases (visualized via choropleth and sunburst charts).
-- **Party Performance**: Bharatiya Janata Party (BJP) secured ~300 constituencies with a high win ratio, followed by Indian National Congress (INC) with ~50 wins.
-- **Demographics**: Over 85% of winners are male, indicating gender imbalance. Over 50% of winners are graduates/post-graduates.
-- **Criminal Cases**: Major parties (BJP, INC) have candidates with significant criminal records, visualized via Sankey diagram.
-- **Predictive Model**:
-  - **Accuracy**: 90.51% on test set.
+- **Uttar Pradesh** and **Maharashtra** dominate in number of constituencies.
+- **BJP** led with ~300 seats; **INC** far behind with ~50.
+- **85%+ of winners** are male—gender imbalance is real.
+- A concerning number of candidates have **criminal records**, including major party members.
+- ML model performance:
+  - **Accuracy**: 90.51%
   - **Classification Report**:
+
     ```
               precision    recall  f1-score   support
            0       0.92      0.95      0.94       331
            1       0.86      0.77      0.81       122
     accuracy                           0.91       453
     ```
-  - Confusion matrix (heatmap) confirms strong performance with minimal false predictions.
-    ![alt text](confusion_matrix.png)
 
-## Methodology
+  - Confusion matrix:
+    ![Confusion Matrix](confusion_matrix.png)
 
-### 1. Data Preprocessing
+## 🔧 Methodology
 
-- Cleaned column names (e.g., `CRIMINAL\nCASES` to `CRIMINAL CASES`).
-- Handled missing values: `CRIMINAL CASES` filled with 0, `AGE` with median, categorical columns with 'Unknown'.
-- Converted `ASSETS` and `LIABILITIES` to numeric by removing 'Rs' and commas.
-- Ensured proper data types (e.g., `CRIMINAL CASES` to int64, `WINNER` to int).
+### Data Preprocessing:
+- Renamed columns (e.g., `CRIMINAL\nCASES` → `CRIMINAL CASES`)
+- Filled missing values smartly.
+- Cleaned and converted `ASSETS`, `LIABILITIES` to numeric.
 
-### 2. Exploratory Data Analysis (EDA)
+### EDA:
+- Plotly: Choropleths, sunbursts, Sankey diagrams, bar/pie charts.
+- Matplotlib: Basic geospatial plotting.
 
-- **Tools**: Plotly (interactive visualizations), Matplotlib (geospatial plots).
-- **Analyses**:
-  - State-wise constituency distribution (choropleth map, sunburst chart).
-  - Party win counts and win-loss ratios (bar and stacked bar charts).
-  - Gender ratios and educational qualifications (bar and pie charts).
-  - Criminal cases by party (Sankey diagram).
+### Modeling:
+- Features: `PARTY`, `AGE`, `GENDER`, `CRIMINAL CASES`, `ASSETS`, etc.
+- Model: `RandomForestClassifier` with a `Pipeline` of scaler and encoder.
+- Deployed model: `rf_politician_model_pipeline.pkl`.
 
-### 3. Predictive Modeling
+## Streamlit App: Live Prediction
 
-- **Features**: `PARTY`, `EDUCATION`, `GENDER`, `CATEGORY`, `CRIMINAL CASES`, `AGE`, `TOTAL VOTES`, `TOTAL ELECTORS`, `ASSETS`, `LIABILITIES`.
-- **Model**: RandomForestClassifier in a Pipeline with StandardScaler (numerical features) and OneHotEncoder (categorical features).
-- **Evaluation**: 90.51% accuracy, detailed classification report, and confusion matrix.
-- **Deployment**: Saved model as `rf_politician_model_pipeline.pkl`.
+The prediction tool is now hosted in a Streamlit app for real-time inference.  
+Just fire it up locally and input candidate details to predict if they would have won the 2019 election.
+
 
 ## Installation
 
@@ -106,25 +108,14 @@ datasets/Indian Candidates for General Election 2019/
 Place Indian_States.shp (and related .shx, .dbf, etc.) in datasets/India states/Igismap/:
 ```
 
-5. **Run the Jupyter Notebook**
+5. **Run the Streamlit app**
 
 ```bash
-jupyter notebook main.ipynb
+streamlit run streamlit_app.py
 ```
 
 
 ---
-
-### Inside the Notebook
-
-- **Perform EDA** on candidate demographics, votes, and electoral patterns.
-- **Generate visualizations**, including:
-  - 🗺 Choropleth Map
-  - 🌞 Sunburst Chart
-  - 📊 Bar & Pie Charts
-  - 🔀 Sankey Diagram
-
-
 
 ### License
 

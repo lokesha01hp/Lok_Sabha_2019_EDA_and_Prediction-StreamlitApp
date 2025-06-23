@@ -1,8 +1,8 @@
-# Indian Elections 2019: Exploratory Data Analysis and Prediction 🎯
+# Indian Elections 2019: Exploratory Data Analysis and Prediction (Streamlit App)
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Plotly](https://img.shields.io/badge/Plotly-4.0%2B-orange) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-green) ![Streamlit](https://img.shields.io/badge/Streamlit-1.20%2B-red) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## 🚀 Project Overview
+## Project Overview
 
 This project dives into the 2019 Indian General Elections—the crown jewel of the democratic process—through **Exploratory Data Analysis (EDA)** and **Machine Learning-based prediction**.
 
@@ -12,7 +12,7 @@ Using datasets from Kaggle:
 - Predict the outcome of elections using a trained **RandomForestClassifier** with a **90.51% accuracy rate**.
 - And now, you can experience the model live via an intuitive **Streamlit-based web app**. No Jupyter notebook wrangling needed. Just run, click, predict.
 
-## 🎯 Objectives
+## Objectives
 
 ### Exploratory Data Analysis:
 - Visualize constituency distributions across Indian states.
@@ -27,16 +27,16 @@ Using datasets from Kaggle:
 ## Datasets
 
 ### 1. **Indian Candidates for General Election 2019**  
-- 📦 `LS_2.0.csv`  
-- 🧭 Source: [Kaggle](https://www.kaggle.com/datasets/prakrutchauhan/indian-candidates-for-general-election-2019)  
-- 📝 Candidate attributes: `PARTY`, `GENDER`, `AGE`, `EDUCATION`, `ASSETS`, `CRIMINAL CASES`, etc.
+- `LS_2.0.csv`  
+- Source: [Kaggle](https://www.kaggle.com/datasets/prakrutchauhan/indian-candidates-for-general-election-2019)  
+- Candidate attributes: `PARTY`, `GENDER`, `AGE`, `EDUCATION`, `ASSETS`, `CRIMINAL CASES`, etc.
 
 ### 2. **India States (Shapefile)**  
-- 📦 `Indian_States.shp` (+ `.shx`, `.dbf`, etc.)  
-- 🧭 Source: [Kaggle](https://www.kaggle.com/datasets/somacodes/india-states)  
-- 🗺 Used for choropleth mapping of constituency counts.
+- `Indian_States.shp` (+ `.shx`, `.dbf`, etc.)  
+- Source: [Kaggle](https://www.kaggle.com/datasets/somacodes/india-states)  
+- Used for choropleth mapping of constituency counts.
 
-## 🔍 Key Insights
+## Key Insights
 
 - **Uttar Pradesh** and **Maharashtra** dominate in number of constituencies.
 - **BJP** led with ~300 seats; **INC** far behind with ~50.
@@ -54,9 +54,10 @@ Using datasets from Kaggle:
     ```
 
   - Confusion matrix:
+    
     ![Confusion Matrix](confusion_matrix.png)
 
-## 🔧 Methodology
+## Methodology
 
 ### Data Preprocessing:
 - Renamed columns (e.g., `CRIMINAL\nCASES` → `CRIMINAL CASES`)

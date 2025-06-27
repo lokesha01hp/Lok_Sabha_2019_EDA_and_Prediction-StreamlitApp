@@ -87,20 +87,13 @@ git clone https://github.com/lokesha01hp/Lok_Sabha_2019_EDA_and_Prediction-Strea
 cd Lok_Sabha_2019_EDA_and_Prediction
 ```
 
-2. **Set Up a Virtual Environment (Recommended)**
-
-```bash
-python -m venv venv
-venv\Scripts\activate  # On Windows
-```
-
-3. **Install Dependencies**
+2. **Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Download & Place Datasets**
+3. **Download & Place Datasets**
 
 Place LS_2.0.csv in:
 
@@ -109,7 +102,7 @@ datasets/Indian Candidates for General Election 2019/
 Place Indian_States.shp (and related .shx, .dbf, etc.) in datasets/India states/Igismap/:
 ```
 
-5. **Run the Streamlit app**
+4. **Run the Streamlit app**
 
 ```bash
 streamlit run app.py

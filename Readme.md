@@ -111,7 +111,7 @@ Place Indian_States.shp (and related .shx, .dbf, etc.) in datasets/India states/
 5. **Run the Streamlit app**
 
 ```bash
-streamlit run streamlit_app.py
+streamlit run app.py
 ```
 
 

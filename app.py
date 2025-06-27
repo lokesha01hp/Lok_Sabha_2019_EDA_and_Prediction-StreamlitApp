@@ -19,8 +19,8 @@ def main():
 
     st.markdown("### Enter Candidate Details:")
 
-    party = st.selectbox("Party", ["--Select any party name--","BJP", "INC", "AAP", "SP", "BSP", "Independent", "Other"])
-    education = st.selectbox("Education Level", ["--Select any qualification details--",
+    party = st.selectbox("Party", ["--Select party name--","BJP", "INC", "AAP", "SP", "BSP", "Independent", "Other"])
+    education = st.selectbox("Education Level", ["--Select qualification details--",
         "10th Pass", "12th Pass", "Graduate", "Graduate Professional",
         "Post Graduate", "Doctorate", "Illiterate", "Others"
     ])
@@ -65,7 +65,7 @@ def main():
 
     if st.checkbox("Show Candidate Input Data"):
         if 'input_df' in st.session_state:
-            st.markdown("####  Candidate Data Preview:")
+            st.markdown("#### Candidate Data Preview:")
             st.dataframe(st.session_state['input_df'])
         else:
             st.warning("Please predict first to view the input data.")

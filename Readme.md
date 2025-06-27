@@ -1,5 +1,8 @@
 # Indian Elections 2019: Exploratory Data Analysis and Prediction (Streamlit App)
 
+**[👉VoteVista: Lok Sabha Candidate Win Predictor (Live)](https://lok-sabha-candidate-winning-prediction.streamlit.app/)**
+
+
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Plotly](https://img.shields.io/badge/Plotly-4.0%2B-orange) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-green) ![Streamlit](https://img.shields.io/badge/Streamlit-1.20%2B-red) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Project Overview

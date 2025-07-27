@@ -11,7 +11,14 @@ Using datasets from Kaggle:
 - Analyze key trends like party performance, voter demographics, and candidate criminal records.
 - Predict the outcome of elections using a trained **RandomForestClassifier** with a **90.51% accuracy rate**.
 - And now, you can experience the model live via an intuitive **Streamlit-based web app**. No Jupyter notebook wrangling needed. Just run, click, predict.
+---
+### Acknowledgments
 
+**Datasets by:**
+- Prakrut Chauhan  
+- Somacodes (Kaggle)
+
+---
 ## Objectives
 
 ### Exploratory Data Analysis:
@@ -110,10 +117,3 @@ streamlit run app.py
 
 
 ---
-
-### Acknowledgments
-
-**Datasets by:**
-- Prakrut Chauhan  
-- Somacodes (Kaggle)
-

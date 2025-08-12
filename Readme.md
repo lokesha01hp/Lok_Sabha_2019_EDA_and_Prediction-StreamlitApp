@@ -8,9 +8,9 @@ This project dives into the 2019 Indian General Elections—the crown jewel of t
 
 Using datasets from Kaggle:
 
-- Analyze key trends like party performance, voter demographics, and candidate criminal records.
+- Analyse key trends like party performance, voter demographics, and candidate criminal records.
 - Predict the outcome of elections using a trained **RandomForestClassifier** with a **90.51% accuracy rate**.
-- And now, you can experience the model live via an intuitive **Streamlit-based web app**. No Jupyter notebook wrangling needed. Just run, click, predict.
+- And now, you can experience the model live via an intuitive **Streamlit-based web app**. No Jupyter notebook wrangling needed. Just run, click, and predict.
 ---
 ### Acknowledgments
 
@@ -22,11 +22,11 @@ Using datasets from Kaggle:
 ## Objectives
 
 ### Exploratory Data Analysis:
-- Visualize constituency distributions across Indian states.
-- Analyze win-loss ratios, gender representation, education levels, and criminal backgrounds.
-- All visualizations built with Plotly, themed for high contrast and accessibility.
+- Visualise constituency distributions across Indian states.
+- Analyse win-loss ratios, gender representation, education levels, and criminal backgrounds.
+- All visualisations built with Plotly, themed for high contrast and accessibility.
 
-### Predictive Modeling:
+### Predictive Modelling:
 - Input candidate info like party, age, education, assets, etc.
 - Predict winning chances using a trained RandomForestClassifier.
 - Deployed as a **Streamlit app** for live predictions.
